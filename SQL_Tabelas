@@ -1,0 +1,26 @@
+create table "StatusTCE".municipio (
+	id integer, 
+	nome varchar(100), 
+	cep varchar(8),
+	uf varchar(2),
+	codigoIbge integer, 
+	codigoSiafi integer,
+	constraint pk_municipio primary key(id)
+);
+
+create table "StatusTCE".competencia (
+	id integer, 
+	competencia varchar(7),
+	ano integer, 
+	bimestre integer, 
+	id_status integer, 
+	dataStatus date,
+	constraint pk_competencia primary key(id)
+); 
+
+create table "StatusTCE".status (
+	id integer, 
+	descricao varchar(20),
+	constraint pk_status primary key(id)
+);
+
