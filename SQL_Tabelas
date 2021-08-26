@@ -24,3 +24,13 @@ create table "StatusTCE".status (
 	constraint pk_status primary key(id)
 );
 
+
+create table "StatusTCE".entidadeTCE (
+	id integer, -- unidade gestora 
+	nome varchar(100), 
+	id_municipio integer, 
+	cnpj varchar(14),
+	id_responsavel integer,
+	constraint pk_entidadeTCE primary key(id)
+--	,	constraint fk_municipio_entidadeTCE foreign (id_municipio) references municipio(id)
+);
