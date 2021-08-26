@@ -47,4 +47,17 @@ create table "StatusTCE".unidadeAtendimento(
 	constraint pk_unidadeAtendimento primary key(id)
 );
 
+create table "StatusTCE".grupoAssunto(
+	id integer, 
+	descricao varchar(30),
+	constraint pk_grupoAssunto primary key(id)
+);
+
+create table "StatusTCE".assunto(
+	id integer, 
+	descricao varchar(30),
+	id_grupoAssunto integer, 
+	constraint pk_assunto primary key(id)
+);
+
 
