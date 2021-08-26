@@ -24,7 +24,6 @@ create table "StatusTCE".status (
 	constraint pk_status primary key(id)
 );
 
-
 create table "StatusTCE".entidadeTCE (
 	id integer, -- unidade gestora 
 	nome varchar(100), 
@@ -32,5 +31,20 @@ create table "StatusTCE".entidadeTCE (
 	cnpj varchar(14),
 	id_responsavel integer,
 	constraint pk_entidadeTCE primary key(id)
---	,	constraint fk_municipio_entidadeTCE foreign (id_municipio) references municipio(id)
 );
+
+create table "StatusTCE".empresaAtendimento(
+	id integer, 
+	nome varchar(30),
+	constraint pk_empresaAtendimento primary key(id)
+
+);
+
+create table "StatusTCE".unidadeAtendimento(
+	id integer, 
+	nome varchar(30),
+	id_empresaAntendimento integer, 
+	constraint pk_unidadeAtendimento primary key(id)
+);
+
+
